@@ -1,10 +1,10 @@
 {
     "posts":[
         {
-        "id": 1,
-        "title": "Classic Vanilla Cake",
-        "content": "A moist and fluffy vanilla cake topped with smooth buttercream",
-        "author": "Chef Emma"
+            "id": 1,
+            "title": "Classic Vanilla Cake",
+            "content": "A moist and fluffy vanilla cake topped with smooth buttercream",
+            "author": "Chef Emma"
 
         },
         {
