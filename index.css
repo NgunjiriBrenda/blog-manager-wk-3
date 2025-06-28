@@ -1,0 +1,43 @@
+body {
+  background-color:bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem;
+ 
+}
+h1, h2{
+    color: black;
+
+}
+#post-list{
+    margin-bottom: 3rem;
+}
+#post-list div{
+    padding: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: slategrey;
+
+}
+#post-list div:hover{
+    background-color: blanchedalmond;
+}
+form{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+form input, form button{
+    padding: 10px;
+    font-size: 1 rem;
+
+
+}
+form button{
+    background-color: blanchedalmond;
+    cursor: pointer;;
+    
+    
+}
