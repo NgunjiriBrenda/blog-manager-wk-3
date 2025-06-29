@@ -4,35 +4,50 @@ function main() {
   displayPosts();
 }
 function displayPosts() {
-  fetch(baseURL)
+  fetch("http://localhost:3000/posts")
     .then(res => res.json())
     .then(posts => {
-      console.log("Fetched ppsts:", posts);
       const postList = document.getElementById("post-list");
       postList.innerHTML = "";
       //const sidebar = document.getElementById("sidebar-posts");
       posts.forEach((post) => {
-        postList.innerHTML += `
-        <div data-id ="${post.id}">
+        const postDiv = document.createElement("div");
+
+        postDiv.innerHTML = `
         <h3>${post.title}</h3>
         <p>${post.content}</p>
-        <small>By: ${post.author}</small
-        <button onclick="deletePost(${post.id})">Delete</button>
-        </div>
+        <small>By: ${post.author}</small><br>
+        <button class="delete-btn">Delete</button>
+        
         `;
 
-        const postDiv = document.createElement("div");
-        postDiv.textContent = post.title;
-        postDiv.addEventListener("click", () => handlePostClick(post.id));
-
         postList.appendChild(postDiv);
+        const deleteBtn = postDiv.querySelector(".delete-btn");
+        if (deleteBtn) {
+          deleteBtn.addEventListener("click", () => {
+            deletePost(post.id);
+          });
+        } else {
+          console.warn("Delete button not found for post:", post);
+        }
       });
     });
 }
+function deletePost(id) {
+  fetch(`http://localhost:3000/posts/${id}`, {
+    method: "DELETE",
+  }).then(res => {
+    if (res.ok) {
+      displayPosts();
+    } else {
+      alert("Failed to delete post");
+    }
+  });
+}
 function handlePostClick(postId) {
   fetch(`${baseURL}/${postId}`)
-    .then(res => res.json())
-    .then(post => {
+    .then((res) => res.json())
+    .then((post) => {
       console.log("Post fetched:", post);
       document.getElementById("post-title").textContent = post.title;
       document.getElementById("post-content").textContent = post.content;
@@ -60,7 +75,7 @@ function addNewPostListener() {
       },
       body: JSON.stringify(newPost),
     })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(() => {
         form.reset();
         displayPosts();
@@ -68,26 +83,8 @@ function addNewPostListener() {
       .catch((error) => console.error("Error adding post:", error));
   });
 }
-document.addEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded", () => {
   displayPosts();
   addNewPostListener();
 });
 
-// function deletePost(id) {
-//   fetch(`http://localhost:3000/posts/${id}`, {
-//     method: "DELETE",
-//   })
-//     .then(res => {
-//       if (res.ok) {
-//         displayPosts();
-//       } else {
-//         alert("Failed to delete post. ");
-//       }
-//     })
-//     .catch((errr) => {
-//       console.error("Error:", err);
-//     });
-// }
-// document.addEventListener("DOMContentLoaded", () => {
-//   displayPosts();
-// });
