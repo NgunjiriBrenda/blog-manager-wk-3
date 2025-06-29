@@ -1,41 +1,46 @@
 {
-    "posts":[
-        {
-            "id": 1,
-            "title": "Classic Vanilla Cake",
-            "content": "A moist and fluffy vanilla cake topped with smooth buttercream",
-            "author": "Chef Emma"
-
-        },
-        {
-            "id": 2,
-            "title": "Strawberry Shortcake",
-            "content": "Layers of sponge cake with whipped cream and fresh strawberries",
-            "author": "Baker Liana"
-        },
-        {
-            "id": 3,
-            "title": "Chocolate fudge Delight",
-            "content": "Rich, dense chocolate cake filled with fudge and covered in ganache",
-            "author": "Mr. Cocoa"
-        },
-        {
-            "id": 4,
-            "title": "Lemon Zest Drizzle",
-            "content": "Zingy lemon cake with a sweet and sour glaze.Perfect for summer!",
-            "author": "Sunny Bakes"
-        },
-        {
-            "id": 5,
-            "title": "Birthday Sprinkle Blast",
-            "content": "Funfetti cake with rainbow sprinkles and colorful frosting swirls",
-            "author": "Baker Bella"
-        },
-        {
-            "id": 6,
-            "title": "Red Velvet Dream",
-            "content": "Velvvety red layers with tangy cream cheese frosting and love in every bite",
-            "author": "Chef Tasha"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Classic Vanilla Cake",
+      "content": "A moist and fluffy vanilla cake topped with smooth buttercream",
+      "author": "Chef Emma"
+    },
+    {
+      "id": 2,
+      "title": "Strawberry Shortcake",
+      "content": "Layers of sponge cake with whipped cream and fresh strawberries",
+      "author": "Baker Liana"
+    },
+    {
+      "id": 3,
+      "title": "Chocolate fudge Delight",
+      "content": "Rich, dense chocolate cake filled with fudge and covered in ganache",
+      "author": "Mr. Cocoa"
+    },
+    {
+      "id": 4,
+      "title": "Lemon Zest Drizzle",
+      "content": "Zingy lemon cake with a sweet and sour glaze.Perfect for summer!",
+      "author": "Sunny Bakes"
+    },
+    {
+      "id": 5,
+      "title": "Birthday Sprinkle Blast",
+      "content": "Funfetti cake with rainbow sprinkles and colorful frosting swirls",
+      "author": "Baker Bella"
+    },
+    {
+      "id": 6,
+      "title": "Red Velvet Dream",
+      "content": "Velvvety red layers with tangy cream cheese frosting and love in every bite",
+      "author": "Chef Tasha"
+    },
+    {
+      "title": "White forest Cake",
+      "content": "Melted chcolate suprise inside",
+      "author": "Jace Norman",
+      "id": 7
+    }
+  ]
 }
